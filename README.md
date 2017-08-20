@@ -2,7 +2,7 @@
 
 # [TC] Gaming API Documentation
 
-**API Version:** 2
+**API Version:** 2  
 **Latest Revision:** 16th April 2017
 
 Our API lets developers gain full access to all of the [TC] server statistics including live server statuses and CityDriving statistics.
