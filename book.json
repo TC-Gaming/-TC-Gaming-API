@@ -1,5 +1,5 @@
 {
-    "plugins": [ "theme-api" ],
+    "plugins": [ "theme-api", "edit-link" ],
     "pluginsConfig": {
         "theme-api": {
             "languages": [
@@ -13,6 +13,10 @@
                     "name": "Go"
                 }
             ]
+        },
+        "edit-link": {
+            "base": "https://github.com/TC-Gaming/API-Documentation/edit",
+            "label": "Edit This Page"
         }
     }
 }
