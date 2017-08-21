@@ -7,7 +7,7 @@
   * [Rate Limiting](introduction/rate-limiting.md)
   * [Available APIs](introduction/available-apis.md)
 * [CityDriving Statistics API](citydriving-statistics-api.md)
-* [Public JSON API](public-json-api.md)
+* [Public Server Status JSON API](public-json-api.md)
 
 ## Methods
 
