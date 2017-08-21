@@ -15,7 +15,7 @@
             ]
         },
         "edit-link": {
-            "base": "https://github.com/TC-Gaming/API-Documentation/edit",
+            "base": "https://github.com/TC-Gaming/API-Documentation",
             "label": "Edit This Page"
         }
     }
