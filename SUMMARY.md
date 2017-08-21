@@ -2,7 +2,7 @@
 
 ## Overview
 
-* [Introduction](README.md)
+* [Introduction](./README.md)
   * [API Keys](introduction/api-keys.md)
   * [Rate Limiting](introduction/rate-limiting.md)
   * [Available APIs](introduction/available-apis.md)
