@@ -29,21 +29,21 @@ HTTP/1.1 200 OK
 **RESPONSE:**
 ```json
 {
-"server": "One",
-"time": 1490493497160,
-"players": {
-"17": {
-"siren": false,
-"med": false,
-"caution": false,
-"tow": false,
-"cop": false,
-"isChased": false,
-"isJoining": false,
-"hazard": false
-}
-},
-...
+    "server": "One",
+    "time": 1490493497160,
+    "players": {
+        "17": {
+            "siren": false,
+            "med": false,
+            "caution": false,
+            "tow": false,
+            "cop": false,
+            "isChased": false,
+            "isJoining": false,
+            "hazard": false
+        },
+        ...
+    }
 }
 ```
 
@@ -62,21 +62,21 @@ HTTP/1.1 200 OK
 **RESPONSE:**
 ```json
 {
-"server": "Two",
-"time": 1490493497160,
-"players": {
-"17": {
-"siren": false,
-"med": false,
-"caution": false,
-"tow": false,
-"cop": false,
-"isChased": false,
-"isJoining": false,
-"hazard": false
-},
-...
-}
+    "server": "Two",
+    "time": 1490493497160,
+    "players": {
+        "17": {
+            "siren": false,
+            "med": false,
+            "caution": false,
+            "tow": false,
+            "cop": false,
+            "isChased": false,
+            "isJoining": false,
+            "hazard": false
+        },
+        ...
+    }
 }
 ```
 
@@ -95,21 +95,21 @@ HTTP/1.1 200 OK
 **RESPONSE:**
 ```json
 {
-"server": "Three",
-"time": 1490493497160,
-"players": {
-"17": {
-"siren": false,
-"med": false,
-"caution": false,
-"tow": false,
-"cop": false,
-"isChased": false,
-"isJoining": false,
-"hazard": false
-},
-...
-}
+    "server": "Three",
+    "time": 1490493497160,
+    "players": {
+        "17": {
+            "siren": false,
+            "med": false,
+            "caution": false,
+            "tow": false,
+            "cop": false,
+            "isChased": false,
+            "isJoining": false,
+            "hazard": false
+        },
+        ...
+    }
 }
 ```
 
@@ -128,20 +128,20 @@ HTTP/1.1 200 OK
 **RESPONSE:**
 ```json
 {
-"server": "Four",
-"time": 1490493497160,
-"players": {
-"17": {
-"siren": false,
-"med": false,
-"caution": false,
-"tow": false,
-"cop": false,
-"isChased": false,
-"isJoining": false,
-"hazard": false
-},
-...
-}
+    "server": "Four",
+    "time": 1490493497160,
+    "players": {
+        "17": {
+            "siren": false,
+            "med": false,
+            "caution": false,
+            "tow": false,
+            "cop": false,
+            "isChased": false,
+            "isJoining": false,
+            "hazard": false
+        },
+        ...
+    }
 }
 ```
