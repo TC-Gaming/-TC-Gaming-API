@@ -17,7 +17,7 @@ The server status overview gives details such as online status, track code, trac
 | Name | Expected Value |
 | :--- | :--- | :--- |
 | `key` | _{string}_ : API Key |
-| `server` | _{string}_ : all \| one \| two \| three \| events \| training |
+| `server` | _{string}_ : all &#124; one &#124; two &#124; three &#124; events &#124; training |
 
 #### Example
 
