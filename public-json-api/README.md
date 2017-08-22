@@ -1,5 +1,4 @@
-#
-Public Server Status JSON API
+# Public Server Status JSON API
 
 The Public Server Status JSON API gives you access to live server statuses. This API is public and **does not require a key** as this data is cached every 5 seconds.
 
