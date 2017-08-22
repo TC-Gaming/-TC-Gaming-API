@@ -22,6 +22,8 @@ Access all of a CityDriving user's profile details and statistics.
 
 #### Optional Parameters
 
+This API can optionally return a stats object, an array of cars and/or and array of licenses. Any combination can be requested.
+
 | Name | Expected Value |
 | :--- | :--- |
 | `stats` | _{number}_ : 0 &#124; 1 |
@@ -126,7 +128,7 @@ Access a CityDriving user's `!setopt` InSim UI options.
 
 **REQUEST:** `?key=YOUR_KEY&username=mbutcher`
 
-This API only returns the options which have been changed from the default setting using the !setopt command. Numbers refer to the LFS colour code of the chat message. This example shows the default values which would not normally be returned. Example user: [MButcher](https://world.city-driving.co.uk/?page=profile&id_user=17).
+This API only returns the options which have been changed from the default setting using the `!setopt` command. Numbers refer to the LFS colour code of the chat message. This example shows the default values which would not normally be returned. Example user: [MButcher](https://world.city-driving.co.uk/?page=profile&id_user=17).
 
 **RESPONSE:** 
 
