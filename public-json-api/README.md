@@ -17,7 +17,7 @@ We currently offer the following public JSON APIs:
 
 **ENDPOINT:** `/json/status_one.json`
 
-This request indexes players by ID (inside the `players` object) and returns all currently connected clients. This example only returns one client for brevity.
+This request indexes players by InSim PLID (inside the `players` object) and returns all currently connected clients. It is designed for use with local InSim applications. This example only returns one client for brevity.
 
 **REQUEST:**
 ```shell
@@ -50,7 +50,7 @@ HTTP/1.1 200 OK
 
 **ENDPOINT:** `/json/status_two.json`
 
-This request indexes players by ID (inside the `players` object) and returns all currently connected clients. This example only returns one client for brevity.
+This request indexes players by InSim PLID (inside the `players` object) and returns all currently connected clients. It is designed for use with local InSim applications. This example only returns one client for brevity.
 
 **REQUEST:**
 ```shell
@@ -83,7 +83,7 @@ HTTP/1.1 200 OK
 
 **ENDPOINT:** `/json/status_three.json`
 
-This request indexes players by ID (inside the `players` object) and returns all currently connected clients. This example only returns one client for brevity.
+This request indexes players by InSim PLID (inside the `players` object) and returns all currently connected clients. It is designed for use with local InSim applications. This example only returns one client for brevity.
 
 **REQUEST:**
 ```shell
@@ -116,7 +116,7 @@ HTTP/1.1 200 OK
 
 **ENDPOINT:** `/json/status_four.json`
 
-This request indexes players by ID (inside the `players` object) and returns all currently connected clients. This example only returns one client for brevity.
+This request indexes players by InSim PLID (inside the `players` object) and returns all currently connected clients. It is designed for use with local InSim applications. This example only returns one client for brevity.
 
 **REQUEST:**
 
