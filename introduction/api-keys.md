@@ -12,7 +12,7 @@ This key should be used during development and testing of your application. This
 
 ## IP Restricted Keys
 
-If you are serving web pages that use our API you will need an IP restricted API key which restricts requests to a list of IP addresses. To request an API key for your website please [drop us an email](mailto:info@city-driving.co.uk?subject=Request for IP Restricted API Key).
+If you are serving web pages that use our API you will need an IP restricted API key which restricts requests to a list of IP addresses. To request an API key for your website please [drop us an email](mailto:info@city-driving.co.uk?subject=Request for IP Restricted API Key). 
 
 ## Access Errors
 
