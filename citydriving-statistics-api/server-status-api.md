@@ -2,6 +2,10 @@
 
 The endpoint for the server status API is: `/citydriving/live`
 
+## API Index
+
+We currently offer the following server status APIs:
+
 | API | Documentation |
 | :--- | :--- |
 | Server Status Overview | [View Docs](#server-status-overview) |

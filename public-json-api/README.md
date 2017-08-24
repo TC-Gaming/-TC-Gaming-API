@@ -1,6 +1,6 @@
 # Public Server Status JSON API
 
-The Public Server Status JSON API gives you access to live server statuses. This API is public and **does not require a key** as this data is cached every 5 seconds.
+The Public Server Status JSON API gives you access to live server statuses. This API is public and **does not require a key** as this data is cached every second.
 
 ## API Index
 
@@ -15,17 +15,15 @@ We currently offer the following public JSON APIs:
 
 ## Server Status: CityDriving One
 
-**ENDPOINT:** `/json/status_one.json`
+**REQUEST:** `/json/status_one.json`
 
 This request indexes players by InSim PLID (inside the `players` object) and returns all currently connected clients. It is designed for use with local InSim applications. This example only returns one client for brevity.
 
-**REQUEST:**
+**RESPONSE:**
 ```shell
 GET https://api.tc-gaming.co.uk/json/status_one.json
 HTTP/1.1 200 OK
 ```
-
-**RESPONSE:**
 ```json
 {
     "server": "One",
@@ -48,17 +46,15 @@ HTTP/1.1 200 OK
 
 ## Server Status: CityDriving Two
 
-**ENDPOINT:** `/json/status_two.json`
+**REQUEST:** `/json/status_two.json`
 
 This request indexes players by InSim PLID (inside the `players` object) and returns all currently connected clients. It is designed for use with local InSim applications. This example only returns one client for brevity.
 
-**REQUEST:**
+**RESPONSE:**
 ```shell
 GET https://api.tc-gaming.co.uk/json/status_two.json
 HTTP/1.1 200 OK
 ```
-
-**RESPONSE:**
 ```json
 {
     "server": "Two",
@@ -81,17 +77,15 @@ HTTP/1.1 200 OK
 
 ## Server Status: CityDriving Three
 
-**ENDPOINT:** `/json/status_three.json`
+**REQUEST:** `/json/status_three.json`
 
 This request indexes players by InSim PLID (inside the `players` object) and returns all currently connected clients. It is designed for use with local InSim applications. This example only returns one client for brevity.
 
-**REQUEST:**
+**RESPONSE:**
 ```shell
 GET https://api.tc-gaming.co.uk/json/status_three.json
 HTTP/1.1 200 OK
 ```
-
-**RESPONSE:**
 ```json
 {
     "server": "Three",
@@ -114,17 +108,15 @@ HTTP/1.1 200 OK
 
 ## Server Status: CityDriving Four
 
-**ENDPOINT:** `/json/status_four.json`
+**REQUEST:** `/json/status_four.json`
 
 This request indexes players by InSim PLID (inside the `players` object) and returns all currently connected clients. It is designed for use with local InSim applications. This example only returns one client for brevity.
 
-**REQUEST:**
-
+**RESPONSE:**
 ```shell
 GET https://api.tc-gaming.co.uk/json/status_four.json
 HTTP/1.1 200 OK
 ```
-**RESPONSE:**
 ```json
 {
     "server": "Four",
