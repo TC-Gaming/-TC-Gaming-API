@@ -1,6 +1,6 @@
 # AutoMarket API
 
-The endpoint for the server status API is: `/citydriving/market`
+The endpoint for the AutoMarket API is: `/citydriving/market`
 
 | API | Documentation |
 | :--- | :--- |
@@ -8,7 +8,7 @@ The endpoint for the server status API is: `/citydriving/market`
 
 ## Get Current Listings
 
-The AutoMarket API returns all available cars on the market or all available cars of a certain type.
+The AutoMarket API returns all available cars on the [CityDriving AutoMarket](https://world.city-driving.co.uk/?page=market) or all available cars of a certain type.
 
 **ENDPOINT:** `/citydriving/market/getlist`
 
@@ -30,7 +30,7 @@ This API can optionally return listings of a certain type of car. To do so, add 
 
 #### Examples
 
-**REQUEST:** `?key=YOUR_KEY`
+**REQUEST:** `?key=YOUR_KEY&type=uf1`
 
 This example request will return all available UF1s on the market. This example only returns one car for brevity.
 

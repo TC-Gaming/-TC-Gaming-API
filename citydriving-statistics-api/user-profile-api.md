@@ -1,6 +1,6 @@
 # User Profile API
 
-The endpoint for the server status API is: `/citydriving/profile`
+The endpoint for the user profile API is: `/citydriving/profile`
 
 | API | Documentation |
 | :--- | :--- |
