@@ -22,7 +22,90 @@ The endpoint for the statistics API is: `/citydriving/stats`
 | [TC] Racing Members | [View Docs](#racing-members) |
 
 ## Users Online
+
+The users online API gives you basic details of all users who are online on a [TC] CityDriving server. To request only the users on a specific server, see: [Users Online by Server](#users-online-by-server).
+
+**ENDPOINT:** `/citydriving/stats/online`
+
+#### Mandatory Parameters
+
+| Name | Expected Value |
+| :--- | :--- |
+| `key` | _{string}_ : API Key |
+
+#### Example
+
+**REQUEST:** `?key=YOUR_KEY`
+
+This request usually returns all connected users on all CityDriving servers. This example only shows one user for brevity.
+
+**RESPONSE:** 
+```shell
+GET https://api.tc-gaming.co.uk/citydriving/stats/online?key=YOUR_KEY
+HTTP/1.1 200 OK
+```
+```json
+[
+    {
+        "id": "11969",
+        "countryCode": "GB",
+        "username": "Garypants",
+        "nickname": "^1[TC]^7\u203aCarl\u2039",
+        "money": "259473",
+        "distance": "156889746",
+        "trip": "34846",
+        "bonus": "22",
+        "lastCar": "XRT",
+        "lastPosition": "^3Medical Centre^8",
+        "server": "^7One"
+    },
+    ...
+]
+```
+
 ## Users Online by Server
+
+The users online by server API gives you a breakdown of online users by server.
+
+**ENDPOINT:** `/citydriving/stats/live`
+
+#### Mandatory Parameters
+
+| Name | Expected Value |
+| :--- | :--- |
+| `key` | _{string}_ : API Key |
+| `server` | _{string}_: one &#124; two &#124; three &#124; four |
+
+#### Example
+
+**REQUEST:** `?key=YOUR_KEY`
+
+This request usually returns all connected users on a given CityDriving server. This example only shows one user for brevity.
+
+**RESPONSE:** 
+```shell
+GET https://api.tc-gaming.co.uk/citydriving/stats/live?key=YOUR_KEY&server=two
+HTTP/1.1 200 OK
+```
+```json
+[
+    {
+        "id": "11969",
+        "countryCode": "GB",
+        "username": "Garypants",
+        "nickname": "^1[TC]^7\u203aCarl\u2039",
+        "money": "259473",
+        "distance": "156889746",
+        "trip": "34846",
+        "bonus": "22",
+        "lastCar": "XRT",
+        "lastPosition": "^3Medical Centre^8",
+        "server": "^7Two"
+    },
+    ...
+]
+```
+
 ## Top Distance
 ## Top Money
 ## Top Wealth
