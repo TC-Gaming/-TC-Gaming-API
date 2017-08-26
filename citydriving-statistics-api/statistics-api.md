@@ -27,12 +27,18 @@ We currently offer the following statistics APIs:
 
 ## API-Wide Optional Parameters
 
-All statistics API requests default to 20 rows. Certain applications may require more rows or a range of rows. For this reason all statistics API requests can utilise the `range` and `skip` parameters.
+All statistics API requests default to 20 rows. Certain applications may require more rows or a range of rows. For this reason all statistics API requests can utilise the `rows` and `skip` parameters. With these parameters, you can request any range of rows in the top 1000 total records.
 
 | Name | Expected Value | Default Value |
 | :--- | :--- | :--- |
 | `rows` | _{integer}_ : Number of rows to request | 20 |
 | `skip` | _{integer}_ : Number of rows to skip/offset | - |
+
+#### Examples
+
+Request first 50 records: `rows=50`  
+Request records 60 to 80: `skip=60`  
+Request records 100 to 200: `skip=100&rows=100`  
 
 ---
 
