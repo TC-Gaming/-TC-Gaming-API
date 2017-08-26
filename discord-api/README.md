@@ -1,4 +1,4 @@
-# Discord API
+# [TC] Discord API
 
 The endpoint for the Discord API is: `/discord_status`
 

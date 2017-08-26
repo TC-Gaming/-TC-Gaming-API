@@ -40,7 +40,7 @@ This API can optionally return a stats object, an array of cars and/or and array
 
 **REQUEST:** `?key=YOUR_KEY&username=mbutcher&stats=1&cars=1&licenses=1`
 
-This request usually returns all cars and licenses owned by a user. This example only shows one of each for brevity. Example user: [MButcher](https://world.city-driving.co.uk/?page=profile&id_user=17).
+This request usually returns all cars and licenses owned by a user. This example only shows one of each for brevity.
 
 **RESPONSE:**
 
@@ -137,7 +137,7 @@ Access a CityDriving user's `!setopt` InSim UI options.
 
 **REQUEST:** `?key=YOUR_KEY&username=mbutcher`
 
-This API only returns the options which have been changed from the default setting using the `!setopt` command. Numbers refer to the LFS colour code of the chat message. This example shows the default values which would not normally be returned. Example user: [MButcher](https://world.city-driving.co.uk/?page=profile&id_user=17).
+This API only returns the options which have been changed from the default setting using the `!setopt` command. Numbers refer to the LFS colour code of the chat message. This example shows the default values which would not normally be returned.
 
 **RESPONSE:** 
 

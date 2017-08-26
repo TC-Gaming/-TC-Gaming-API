@@ -50,11 +50,11 @@ HTTP/1.1 200 OK
     {
         "vin": "AAEXW",
         "type": "UF1",
-        "dateBuilt": "1332041585",
-        "datePurchase": "1332041585",
-        "onMarketSince": "1501386141",
-        "condition": "71.9",
-        "daysOnMarket": "23",
+        "dateBuilt": 1332041585,
+        "datePurchase": 1332041585,
+        "onMarketSince": 1501386141,
+        "condition": 71.9,
+        "daysOnMarket": 23,
         "pre_owner_nickname": "alsulaiti"
     },
     ...
