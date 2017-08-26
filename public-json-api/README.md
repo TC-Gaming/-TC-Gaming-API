@@ -13,6 +13,8 @@ We currently offer the following public JSON APIs:
 | `/status_three.json` | CityDriving Three Server Status | [View Docs](#server-status-citydriving-three)|
 | `/status_four.json` | CityDriving Four Server Status | [View Docs](#server-status-citydriving-four)|
 
+---
+
 ## Server Status: CityDriving One
 
 **REQUEST:** `/json/status_one.json`

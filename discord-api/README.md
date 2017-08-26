@@ -2,9 +2,15 @@
 
 The endpoint for the Discord API is: `/discord_status`
 
+## API Index
+
+We currently offer the following Discord APIs:
+
 | API | Documentation |
 | :--- | :--- |
 | Discord Status API | [View Docs](#discord-status-api) |
+
+---
 
 ## Discord Status API
 

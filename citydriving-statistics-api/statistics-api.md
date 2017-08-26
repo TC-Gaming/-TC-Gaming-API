@@ -2,6 +2,10 @@
 
 The endpoint for the statistics API is: `/citydriving/stats`
 
+## API Index
+
+We currently offer the following statistics APIs:
+
 | API | Documentation |
 | :--- | :--- |
 | Users Online | [View Docs](#users-online) |
@@ -20,6 +24,17 @@ The endpoint for the statistics API is: `/citydriving/stats`
 | [TC] CityDriving Members | [View Docs](#citydriving-members) |
 | [TC] CityDriving Admins by Level | [View Docs](#citydriving-admins-by-level) |
 | [TC] Racing Members | [View Docs](#racing-members) |
+
+## API-Wide Optional Parameters
+
+All statistics API requests default to 20 rows. Certain applications may require more rows or a range of rows. For this reason all statistics API requests can utilise the `range` and `skip` parameters.
+
+| Name | Expected Value | Default Value |
+| :--- | :--- | :--- |
+| `rows` | _{integer}_ : Number of rows to request | 20 |
+| `skip` | _{integer}_ : Number of rows to skip/offset | - |
+
+---
 
 ## Users Online
 
@@ -62,6 +77,8 @@ HTTP/1.1 200 OK
     ...
 ]
 ```
+
+---
 
 ## Users Online by Server
 
@@ -106,7 +123,50 @@ HTTP/1.1 200 OK
 ]
 ```
 
+---
+
 ## Top Distance
+
+The top distance API can return any range of the top 1000 users with the highest total driven distance. The default range is 20.
+
+**ENDPOINT:** `/citydriving/stats/distance`
+
+#### Mandatory Parameters
+
+| Name | Expected Value |
+| :--- | :--- |
+| `key` | _{string}_ : API Key |
+
+#### Example
+
+**REQUEST:** `?key=YOUR_KEY`
+
+This request usually returns all connected users on all CityDriving servers. This example only shows one user for brevity.
+
+**RESPONSE:** 
+```shell
+GET https://api.tc-gaming.co.uk/citydriving/stats/online?key=YOUR_KEY
+HTTP/1.1 200 OK
+```
+```json
+[
+    {
+        "id": "11969",
+        "countryCode": "GB",
+        "username": "Garypants",
+        "nickname": "^1[TC]^7\u203aCarl\u2039",
+        "money": "259473",
+        "distance": "156889746",
+        "trip": "34846",
+        "bonus": "22",
+        "lastCar": "XRT",
+        "lastPosition": "^3Medical Centre^8",
+        "server": "^7One"
+    },
+    ...
+]
+```
+
 ## Top Money
 ## Top Wealth
 ## Cop Experience

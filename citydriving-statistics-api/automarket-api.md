@@ -2,9 +2,15 @@
 
 The endpoint for the AutoMarket API is: `/citydriving/market`
 
+## API Index
+
+We currently offer the following AutoMarket APIs:
+
 | API | Documentation |
 | :--- | :--- |
 | Get Current Listings | [View Docs](#get-current-listings) |
+
+---
 
 ## Get Current Listings
 

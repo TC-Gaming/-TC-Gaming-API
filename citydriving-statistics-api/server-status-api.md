@@ -10,6 +10,8 @@ We currently offer the following server status APIs:
 | :--- | :--- |
 | Server Status Overview | [View Docs](#server-status-overview) |
 
+---
+
 ## Server Status Overview
 
 The server status overview gives details such as online status, track code, track name and the number of allowed and connected guests.

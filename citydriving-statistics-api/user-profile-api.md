@@ -2,10 +2,16 @@
 
 The endpoint for the user profile API is: `/citydriving/profile`
 
+## API Index
+
+We currently offer the following user profile APIs:
+
 | API | Documentation |
 | :--- | :--- |
 | Get a User Profile | [View Docs](#get-a-user-profile) |
 | Get a User's InSim UI Options | [View Docs](#get-a-users-insim-ui-options) |
+
+---
 
 ## Get a User Profile
 
@@ -111,6 +117,9 @@ HTTP/1.1 200 OK
   ]
 }
 ```
+
+---
+
 ## Get a User's InSim UI Options
 
 Access a CityDriving user's `!setopt` InSim UI options.
