@@ -38,28 +38,28 @@ $.get("https://api.tc-gaming.co.uk/citydriving/live/status?key=YOUR_KEY&server=a
 Here's how to return the number of connections using PHP
 
 ```php
-      $api = 'https://api.tc-gaming.co.uk/citydriving/live/status?server=all';
-      $key = 'YOUR_KEY';
-      $data = json_decode(file_get_contents($api.'&key='.$key));
+$api = 'https://api.tc-gaming.co.uk/citydriving/live/status?server=all';
+$key = 'YOUR_KEY';
+$data = json_decode(file_get_contents($api.'&key='.$key));
 
-      // Get connections to each server
-      $one = intval($data->one->guests);
-      $two = intval($data->two->guests);
-      $three = intval($data->three->guests);
+// Get connections to each server
+$one = intval($data->one->guests);
+$two = intval($data->two->guests);
+$three = intval($data->three->guests);
 
-      // Get maximum possible connections to each server
-      $maxOne = intval($data->one->maxGuests);
-      $maxTwo = intval($data->two->maxGuests);
-      $maxThree = intval($data->three->maxGuests);
+// Get maximum possible connections to each server
+$maxOne = intval($data->one->maxGuests);
+$maxTwo = intval($data->two->maxGuests);
+$maxThree = intval($data->three->maxGuests);
 
-      // Sum the total connections
-      $total = $one + $two + $three;
+// Sum the total connections
+$total = $one + $two + $three;
 
-      // Sum the total possible connections
-      $maxTotal = $maxOne + $maxTwo + $maxThree;
+// Sum the total possible connections
+$maxTotal = $maxOne + $maxTwo + $maxThree;
 
-      // Output a formatted string
-      echo('[TC] CityDriving Connections: ' . $total . "/" .$maxTotal);
+// Output a formatted string
+echo('[TC] CityDriving Connections: ' . $total . "/" .$maxTotal);
   });
 ```
 
