@@ -60,7 +60,6 @@ $maxTotal = $maxOne + $maxTwo + $maxThree;
 
 // Output a formatted string
 echo('[TC] CityDriving Connections: ' . $total . "/" .$maxTotal);
-  });
 ```
 
 {% common %}
