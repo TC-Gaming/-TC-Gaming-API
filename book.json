@@ -9,10 +9,6 @@
                     "default": true
                 },
                 {
-                    "lang": "jquery",
-                    "name:": "JQuery"
-                },
-                {
                     "lang": "php",
                     "name": "PHP"
                 }
