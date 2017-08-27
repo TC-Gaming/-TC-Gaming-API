@@ -7,6 +7,8 @@
   * [Rate Limiting](introduction/rate-limiting.md)
   * [Available APIs](introduction/available-apis.md)
   * [Planned changes](introduction/planned-changes.md)
+  * [Get Support](introduction/get-support.md)
+  * [Contribute](introduction/contribute.md)
 
 ## APIs
 
@@ -21,5 +23,5 @@
 
 ## Guides
 
-* [Defining Methods](methods.md)
+* [Basic Requests](guides/basic-requests.md)
 
