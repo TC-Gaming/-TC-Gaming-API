@@ -41,7 +41,7 @@ This API can optionally return listings of a certain type of car. To do so, add 
 This example request will return all available UF1s on the market. This example only returns one car for brevity.
 
 **RESPONSE:**
-```shell
+```bash
 GET https://api.tc-gaming.co.uk/citydriving/market/getlist?key=YOUR_KEY&type=uf1
 HTTP/1.1 200 OK
 ```
