@@ -7,7 +7,7 @@ If you're new to using REST APIs, here are the basics for making your first data
 
 In this first example we will make a request to the [Server Status API](../citydriving-statistics-api/server-status-api.md) to work out how many players are online and present this information to our user.
 
-{% sample lang="jquery" %}
+{% sample lang="js" %}
 Here's how to return the number of connections using JavaScript (JQuery).
 
 ```js
