@@ -42,6 +42,21 @@ All of the examples in this guide require the following CSS to properly display 
 
 ### JavaScript
 
+```JS
+var str = '^1Your string. ^4:)';
+
+document.body.innerHTML = LFSColours(str);
+
+function LFSColours(str) {
+  var parts = str.split(/(\^\d)/g).slice(1);
+  var res = "";
+  parts.forEach(function(el, i, arr) {
+    (i % 2 === 0) ? arr[i] = el.slice(1) : res += '<span class="lfs_col' + arr[i-1] + '">' + el + '</span>';
+  });
+  return res;
+}
+```
+
 {% sample lang="php" %}
 
 ### PHP
