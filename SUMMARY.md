@@ -24,4 +24,5 @@
 ## Guides
 
 * [Basic Requests](guides/basic-requests.md)
+* [Converting LFS Colours](guides/converting-lfs-colours.md)
 

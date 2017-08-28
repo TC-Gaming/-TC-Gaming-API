@@ -2,7 +2,7 @@
 
 If you're new to using REST APIs, this guide should help you get started with making basic requests. It provides reference implementations for fetching data from our API by using the [User Profile API](../citydriving-statistics-api/user-profile-api.md) as an example.
 
-Our examples are available in JavaScript and PHP _(change language in the top right)._
+Our code examples are available in JavaScript and PHP _(change language in the top right)._
 
 {% method %}
 ## Reference Implementations
