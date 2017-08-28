@@ -9,4 +9,4 @@ Our REST API lets developers gain full access to all of the [TC] server statisti
 
 All API access is over HTTPS, and accessed from `https://api.tc-gaming.co.uk`. All data is sent and received as JSON. The API requires an [API key](introduction/api-keys.md) to be passed as a parameter. All timestamps are returned as unix timestamps.
 
-{% include "./summary.md" %}
+{% include "./SUMMARY.md" %}
