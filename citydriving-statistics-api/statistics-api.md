@@ -269,7 +269,7 @@ HTTP/1.1 200 OK
         "countryCode": "DE",
         "username": "P V L",
         "nickname": "^7Just ^1P ^7V ^1L",       
-        "wealth":" 5249230,
+        "wealth": 5249230,
         "distance": 68547122,
         "trip": 0,
         "lastCar": null,
