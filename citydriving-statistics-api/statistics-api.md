@@ -445,12 +445,16 @@ HTTP/1.1 200 OK
 ```json
 [
     {
-        "cop": "^6[COP]^5Milo^6[COP]",
-        "robber": "^7Good luck",
-        "date": "2017-08-26 20:19:11",
-        "location": "^3Medical Centre^8, Weston Park",
-        "offense": "Dangerous driving",
-        "fine": 125
+        "id_cop": 28819,
+        "username_cop": "tilo0803",
+        "cop": "^6[COP]^7GMaker",
+        "id_robber": 30589,
+        "username_robber": "lord_ring",
+        "robber": "^1\u2039^7Ricardo^1\u203a",
+        "date": "2017-08-28 14:23:40",
+        "location": "Paddock Tunnel Way, Weston Park",
+        "offense": "Speeding",
+        "fine": 60
     },
     ...
 ]

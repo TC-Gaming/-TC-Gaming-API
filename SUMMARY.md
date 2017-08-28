@@ -6,7 +6,7 @@
   * [API Keys](introduction/api-keys.md)
   * [Rate Limiting](introduction/rate-limiting.md)
   * [Available APIs](introduction/available-apis.md)
-  * [Planned changes](introduction/planned-changes.md)
+  * [Planned Changes](introduction/planned-changes.md)
   * [Get Support](introduction/get-support.md)
   * [Contribute](introduction/contribute.md)
 
