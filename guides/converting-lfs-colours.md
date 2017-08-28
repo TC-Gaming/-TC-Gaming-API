@@ -2,6 +2,8 @@
 
 Live for Speed text that includes colours is encoded. This guide will help you to extract the colours from the text.
 
+Imagine you made a call to the [User Profile API](../citydriving-statistics-api/user-profile-api.md) and wanted to decode the following nickname: `"nickname": "^1[TC]\u00bbPete\u00ab",`. The UTF-8 encoding is not an issue because the browser decodes that automatically for us but the LFS colour prefixes eg. `^1`, will need to be decoded by us before being presented.
+
 Our code examples are available in JavaScript and PHP _(change language in the top right)._
 
 {% method %}
@@ -58,7 +60,7 @@ function LFSColours(str) {
 **Try out this example on [JS Bin](https://jsbin.com/sicaxov/edit?css,js,output)**
 
 ```js
-var str = '^1Your string. ^4:)';
+var str = '^1[TC]\u00bbPete\u00ab';
 
 document.body.innerHTML = LFSColours(str);
 ```
@@ -85,7 +87,7 @@ function LFSColours($raw) {
 #### Example usage
 
 ```php
-$str = '^1Your string. ^4:)';
+$str = '^1[TC]\u00bbPete\u00ab';
 
 echo(LFSColours($str));
 ```
