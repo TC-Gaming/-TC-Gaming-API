@@ -19,7 +19,7 @@ We currently offer the following statistics APIs:
 | Last Tickets | [View Docs](#last-tickets) |
 | Top Crashers | [View Docs](#top-crashers) |
 | Newest Players | [View Docs](#newest-players) |
-| Badges & Licenses | [View Docs](#badges-licenses) |
+| Badges & Licenses | [View Docs](#badges--licenses) |
 | [TC] Training Team Members | [View Docs](#training-team-members)  |
 | [TC] CityDriving Members | [View Docs](#tc-citydriving-members) |
 | [TC] CityDriving Admins by Level | [View Docs](#tc-citydriving-admins-by-level) |
