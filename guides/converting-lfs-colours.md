@@ -35,18 +35,14 @@ All of the examples in this guide require the following CSS to properly display 
 .lfs_col5 {color : #ff00ff;}
 .lfs_col6 {color : #00ffff;}
 .lfs_col7 {color : #ffffff;}
-.lfs_col8 {color : #8a8a8a;}
+.lfs_col8, .lfs_col9 {color : #8a8a8a;}
 ```
 
 {% sample lang="js" %}
 
 ### JavaScript
 
-```JS
-var str = '^1Your string. ^4:)';
-
-document.body.innerHTML = LFSColours(str);
-
+```js
 function LFSColours(str) {
   var parts = str.split(/(\^\d)/g).slice(1);
   var res = "";
@@ -55,6 +51,16 @@ function LFSColours(str) {
   });
   return res;
 }
+```
+
+#### Example usage
+
+**Try out this example on [JS Bin](https://jsbin.com/sicaxov/edit?css,js,output)**
+
+```js
+var str = '^1Your string. ^4:)';
+
+document.body.innerHTML = LFSColours(str);
 ```
 
 {% sample lang="php" %}
@@ -73,6 +79,15 @@ function LFSColours($raw) {
     else $res .= "<span class='lfs_col8'>" . htmlspecialchars($part) . "</span>";
   }
   return $res;
-}```
+}
+```
+
+#### Example usage
+
+```php
+$str = '^1Your string. ^4:)';
+
+echo(LFSColours($str));
+```
 
 {% endmethod %}
