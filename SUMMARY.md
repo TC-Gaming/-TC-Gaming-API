@@ -1,5 +1,3 @@
-# Summary
-
 ## Getting Started
 
 * [Introduction](./README.md)
