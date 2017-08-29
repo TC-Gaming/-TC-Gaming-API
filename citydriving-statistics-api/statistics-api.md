@@ -9,7 +9,6 @@ We currently offer the following statistics APIs:
 | API | Documentation |
 | :--- | :--- |
 | Users Online | [View Docs](#users-online) |
-| Users Online by Server | [View Docs](#users-online-by-server) |
 | Top Distance | [View Docs](#top-distance) |
 | Top Money | [View Docs](#top-money) |
 | Top Wealth | [View Docs](#top-wealth) |
@@ -31,8 +30,11 @@ All statistics API requests default to 20 rows of returned data. Certain applica
 
 | Name | Expected Value | Default Value |
 | :--- | :--- | :--- |
-| `rows` | _{integer}_ : Number of rows to request | 20 |
-| `skip` | _{integer}_ : Number of rows to skip/offset | - |
+| `rows` | _{integer}_ : Number of rows to request: 1-1000 | 20 |
+| `skip` | _{integer}_ : Number of rows to skip/offset: 1-1000 | - |
+| `prettyprint` | _{integer}_ : Use pretty print: 0 &#124; 1 | - |
+
+
 
 #### Examples
 
@@ -44,7 +46,7 @@ Request records 100 to 200: `skip=100&rows=100`
 
 ## Users Online
 
-The users online API gives you basic details of all users who are online on a [TC] CityDriving server. To request only the users on a specific server, see: [Users Online by Server](#users-online-by-server).
+The users online API gives you basic details of all users who are online on a [TC] CityDriving server.
 
 **ENDPOINT:** `/citydriving/stats/online`
 
@@ -53,6 +55,7 @@ The users online API gives you basic details of all users who are online on a [T
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
+| `server` | _{string}_: one &#124; two &#124; three &#124; all |
 
 #### Optional Parameters
 
@@ -60,13 +63,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 #### Example
 
-**REQUEST:** `?key=YOUR_KEY`
+**REQUEST:** `?key=YOUR_KEY&server=all`
 
-This request usually returns all connected users on all CityDriving servers. This example only shows one user for brevity.
+This request usually returns all connected users on a given CityDriving server. This example only shows one user for brevity. The default range is 20 users.
 
 **RESPONSE:** 
 ```shell
-GET https://api.tc-gaming.co.uk/citydriving/stats/online?key=YOUR_KEY
+GET https://api.tc-gaming.co.uk/citydriving/stats/online?key=YOUR_KEY&server=all
 HTTP/1.1 200 OK
 ```
 ```json
@@ -83,55 +86,6 @@ HTTP/1.1 200 OK
         "lastCar": "XRT",
         "lastPosition": "^3Medical Centre^8",
         "server": "^7One"
-    },
-    ...
-]
-```
-
----
-
-## Users Online by Server
-
-The users online by server API gives you a breakdown of online users by server.
-
-**ENDPOINT:** `/citydriving/stats/live`
-
-#### Mandatory Parameters
-
-| Name | Expected Value |
-| :--- | :--- |
-| `key` | _{string}_ : API Key |
-| `server` | _{string}_: one &#124; two &#124; three &#124; four |
-
-#### Optional Parameters
-
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
-
-#### Example
-
-**REQUEST:** `?key=YOUR_KEY`
-
-This request usually returns all connected users on a given CityDriving server. This example only shows one user for brevity.
-
-**RESPONSE:** 
-```shell
-GET https://api.tc-gaming.co.uk/citydriving/stats/live?key=YOUR_KEY&server=two
-HTTP/1.1 200 OK
-```
-```json
-[
-    {
-        "id": 11969,
-        "countryCode": "GB",
-        "username": "Garypants",
-        "nickname": "^1[TC]^7\u203aCarl\u2039",
-        "money": 259473,
-        "distance": 156889746,
-        "trip": 34846,
-        "bonus": 22,
-        "lastCar": "XRT",
-        "lastPosition": "^3Medical Centre^8",
-        "server": "^7Two"
     },
     ...
 ]
