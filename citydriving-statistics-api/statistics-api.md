@@ -123,17 +123,11 @@ HTTP/1.1 200 OK
 ```json
 [
     {
-        "id": 11969,
-        "countryCode": "GB",
-        "username": "Garypants",
-        "nickname": "^1[TC]^7\u203aCarl\u2039",
-        "money": 259473,
-        "distance": 156889746,
-        "trip": 34846,
-        "bonus": 22,
-        "lastCar": "XRT",
-        "lastPosition": "^3Medical Centre^8",
-        "server": "^7One"
+        "id": 23210,
+        "countrycode": "HU",
+        "username": "sergey29",
+        "nickname": "^2[GLOW]Angel[COP]",
+        "value": 341002806.665
     },
     ...
 ]
@@ -172,16 +166,10 @@ HTTP/1.1 200 OK
 [
     {
         "id": 2107,
-        "countryCode": "DE",
+        "countrycode": "DE",
         "username": "P V L",
-        "nickname": "^7Just ^1P ^7V ^1L",       
-        "money": 4671440,
-        "distance": 68547122,
-        "trip": 0,
-        "lastCar": null,
-        "lastPosition": null,
-        "lastSeen": "2017-07-07 08:49:38",
-        "server": null
+        "nickname": "^7Just ^1P ^7V ^1L",
+        "money": 4671440
     },
     ...
 ]
@@ -224,12 +212,6 @@ HTTP/1.1 200 OK
         "username": "P V L",
         "nickname": "^7Just ^1P ^7V ^1L",       
         "wealth": 5249230,
-        "distance": 68547122,
-        "trip": 0,
-        "lastCar": null,
-        "lastPosition": null,
-        "lastSeen": "2017-07-07 08:49:38",
-        "server": null
     },
     ...
 ]
@@ -268,12 +250,10 @@ HTTP/1.1 200 OK
 [
     {
         "id": 23210,
-        "countryCode": "HU",
+        "countrycode": "HU",
         "username": "sergey29",
         "nickname": "^2[GLOW]Angel[COP]",
-        "xp": 483008,
-        "lastSeen": "2017-08-26 20:15:17",
-        "server": "^7Two"
+        "value": 485492
     },
     ...
 ]
@@ -355,13 +335,11 @@ HTTP/1.1 200 OK
 ```json
 [
     {
-        "id": 24557,
-        "countryCode": "NL",
-        "username": "i-love-cruise",
-        "nickname": "^4[CSR]^7Wouter^4[RES]",
-        "rp": 37445,
-        "lastSeen": "2017-08-26 12:02:10",
-        "server": "^7One"
+        "id": 23210,
+        "countrycode": "HU",
+        "username": "sergey29",
+        "nickname": "^2[GLOW]Angel[COP]",
+        "value": 152305
     },
     ...
 ]
@@ -399,16 +377,16 @@ HTTP/1.1 200 OK
 ```json
 [
     {
-        "id_cop": 28819,
-        "username_cop": "tilo0803",
-        "cop": "^6[COP]^7GMaker",
-        "id_robber": 30589,
-        "username_robber": "lord_ring",
-        "robber": "^1\u2039^7Ricardo^1\u203a",
-        "date": "2017-08-28 14:23:40",
-        "location": "Paddock Tunnel Way, Weston Park",
-        "offense": "Speeding",
-        "fine": 60
+        "id_cop": 29920,
+        "username_cop": "adwin",
+        "cop": "^6[G27]^5Milo^6[COP]",
+        "id_robber": 30308,
+        "username_robber": "emogss",
+        "robber": "^1\u00d0^0' Kirito \u672b",
+        "date": 1504023566,
+        "location": "^3Gas Station^8, Weston Park",
+        "offense": "Wrong side \/ wrong way",
+        "fine": 50
     },
     ...
 ]
@@ -447,12 +425,10 @@ HTTP/1.1 200 OK
 [
     {
         "id": 23210,
-        "countryCode": "HU",
+        "countrycode": "HU",
         "username": "sergey29",
         "nickname": "^2[GLOW]Angel[COP]",
-        "crashes": 6451,
-        "last seen": "2017-08-26 20:15:17",
-        "server": "^7Two"
+        "value": 6459
     },
     ...
 ]
@@ -490,13 +466,13 @@ HTTP/1.1 200 OK
 ```json
 [
     {
-        "id": 30900,
-        "countryCode": "BR",
-        "username": "viniciussantos",
-        "nickname": "^4\u3029^7Ran^1dom",
-        "money": 4093,
-        "distance": 4050,
-        "dateJoined": "2017-08-26 14:47:12"
+        "id": 30917,
+        "countryCode": "GB",
+        "username": "matthew997",
+        "nickname": "matthew997",
+        "money": 2045,
+        "dateJoined": 1504012848,
+        "distance": 91926.6326
     },
     ...
 ]
@@ -556,11 +532,7 @@ HTTP/1.1 200 OK
         "id": 4,
         "countrycode": "DE",
         "username": "chucknorris",
-        "nickname": "^7\u2039Chuck\u203a",
-        "money": 1385061,
-        "distance": 222851975,
-        "last seen": "2017-08-26 23:21:59",
-        "server": "^7One"
+        "nickname": "^7\u2039Chuck\u203a"
     },
     ...
 ]
@@ -612,7 +584,7 @@ HTTP/1.1 200 OK
         "id": 487,
         "countrycode": "GB",
         "username": "Degats",
-        "last_seen": "2017-08-25 23:16:39",
+        "nickname": "^1[TC]\u00bbElmo\u00ab[HwA]",
         "trainer_level": 1
     },
     ...
@@ -655,13 +627,8 @@ HTTP/1.1 200 OK
         "countryCode": "GB",
         "username": "mbutcher",
         "nickname": "^1[TC]\u00bbPete\u00ab",
-        "money": 108291,
-        "distance": 223936390,
-        "trip": 0,
-        "lastCar": "No car",
-        "lastPosition": "spectating",
-        "lastSeen": "2017-08-10 02:41:32",
-        "server": "^7One"
+        "lastSeen": 1502325692,
+        "adminLevel": 1
     },
     ...
 ]
@@ -716,13 +683,8 @@ HTTP/1.1 200 OK
         "countryCode": "GB",
         "username": "mbutcher",
         "nickname": "^1[TC]\u00bbPete\u00ab",
-        "money": 108291,
-        "distance": 223936390,
-        "trip": 0,
-        "lastCar": "No car",
-        "lastPosition": "spectating",
-        "lastSeen": "2017-08-10 02:41:32",
-        "server": "^7One"
+        "lastSeen": 1502325692,
+        "adminLevel": 1
     },
     ...
 ]
@@ -770,10 +732,11 @@ HTTP/1.1 200 OK
 [
     {
         "id": 17,
-        "countrycode": "GB",
+        "countryCode": "GB",
         "username": "mbutcher",
-        "last_seen": "2017-08-10 02:41:32",
-        "admin_level": 1
+        "nickname": "^1[TC]\u00bbPete\u00ab",
+        "lastSeen": 1502325692,
+        "adminLevel": 1
     },
     ...
 ]
