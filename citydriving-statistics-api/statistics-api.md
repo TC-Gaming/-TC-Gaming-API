@@ -19,7 +19,7 @@ We currently offer the following statistics APIs:
 | Top Crashers | [View Docs](#top-crashers) |
 | Newest Players | [View Docs](#newest-players) |
 | Badges & Licenses | [View Docs](#badges--licenses) |
-| [TC] Training Team Members | [View Docs](#training-team-members)  |
+| [TC] Training Team Members | [View Docs](#tc-training-team-members)  |
 | [TC] CityDriving Members | [View Docs](#tc-citydriving-members) |
 | [TC] CityDriving Admins by Level | [View Docs](#tc-citydriving-admins-by-level) |
 | [TC] Racing Members | [View Docs](#tc-racing-members) |
@@ -636,7 +636,7 @@ HTTP/1.1 200 OK
 
 ---
 
-## [TC] CityDrivings Admins by Level
+## [TC] CityDriving Admins by Level
 
 Get a list of [TC] CityDriving admins by their admin level. The default range is 20 so you may need to use a higher value for the `rows` parameter.
 
