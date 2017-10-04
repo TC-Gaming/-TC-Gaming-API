@@ -506,7 +506,7 @@ These are the most common values for `badge`.
 | COP | `cop` |
 | TOW | `tow` |
 | MED/RES | `med` |
-| SUPER | `super` |
+| RACE | `race` |
 | [TC] CityDriving Admin | `tc` |
 | [TC] Trainer | `tct` |
 | [GLOW] Member | `glow` |
