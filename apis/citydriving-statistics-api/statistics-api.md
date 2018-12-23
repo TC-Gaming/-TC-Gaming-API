@@ -126,7 +126,6 @@ HTTP/1.1 200 OK
         "countryCode": "GB",
         "username": "mbutcher",
         "nickname": "^1[TC]\u00bbPete\u00ab",
-        "id_user": 17,
         "start_distance": 226358557.0859,
         "start_time": 20416734,
         "current_time": 20416734,
