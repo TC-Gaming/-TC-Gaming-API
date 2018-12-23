@@ -32,9 +32,9 @@ This API can optionally return a stats object, an array of cars and/or and array
 
 | Name | Expected Value |
 | :--- | :--- |
-| `stats` | _{number}_ : 0 &#124; 1 |
-| `cars` | _{number}_ : 0 &#124; 1 |
-| `licenses` | _{number}_ : 0 &#124; 1 |
+| `stats` | _{number}_ : 0 \| 1 |
+| `cars` | _{number}_ : 0 \| 1 |
+| `licenses` | _{number}_ : 0 \| 1 |
 
 #### Example
 
@@ -48,6 +48,7 @@ This request usually returns all cars and licenses owned by a user. This example
 GET https://api.tc-gaming.co.uk/citydriving/profile/get?key=YOUR_KEY&username=chucknorris&stats=1&cars=1&licenses=1
 HTTP/1.1 200 OK
 ```
+
 ```json
 {
   "id": 4,
@@ -57,7 +58,9 @@ HTTP/1.1 200 OK
   "insimAdmin": true,
   "adminLevel": 1,
   "needsCopTraining": false,
-  "money": 1394305,
+  "money": 1586937,
+  "cash": 3628,
+  "balance": 1583309,
   "hasRadarWarner": true,
   "hasLocator": true,
   "hasWinch": true,
@@ -156,12 +159,13 @@ Access a CityDriving user's `!setopt` InSim UI options.
 
 This API only returns the options which have been changed from the default setting using the `!setopt` command. Numbers refer to the LFS colour code of the chat message. This example shows the default values which would not normally be returned.
 
-**RESPONSE:** 
+**RESPONSE:**
 
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/profile/getopts?key=YOUR_KEY&username=mbutcher
 HTTP/1.1 200 OK
 ```
+
 ```json
 {
   "tccol": 5,
@@ -178,3 +182,6 @@ HTTP/1.1 200 OK
   "chase_debug": 0
 }
 ```
+
+
+
