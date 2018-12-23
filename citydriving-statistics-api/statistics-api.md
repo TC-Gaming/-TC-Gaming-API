@@ -114,7 +114,7 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 **REQUEST:** `?key=YOUR_KEY`
 
-This request returns all users currently entered into a Gumball event. This example only shows one user for brevity. Distances are in metres, times are in seconds. The default range is 20 users.
+This request returns all users currently entered into a Gumball event. This example only shows one user for brevity. The default range is 20 users.
 
 **RESPONSE:**
 
