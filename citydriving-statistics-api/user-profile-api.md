@@ -32,9 +32,9 @@ This API can optionally return a stats object, an array of cars and/or and array
 
 | Name | Expected Value |
 | :--- | :--- |
-| `stats` | _{number}_ : 0 \| 1 |
-| `cars` | _{number}_ : 0 \| 1 |
-| `licenses` | _{number}_ : 0 \| 1 |
+| `stats` | _{number}_ : 0 \\| 1 |
+| `cars` | _{number}_ : 0 \\| 1 |
+| `licenses` | _{number}_ : 0 \\| 1 |
 
 #### Example
 
