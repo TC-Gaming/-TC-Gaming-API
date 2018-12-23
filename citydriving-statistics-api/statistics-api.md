@@ -9,6 +9,7 @@ We currently offer the following statistics APIs:
 | API | Documentation |
 | :--- | :--- |
 | Users Online | [View Docs](#users-online) |
+| Gumball | [View Docs](#gumball) |
 | Top Distance | [View Docs](#top-distance) |
 | Top Money | [View Docs](#top-money) |
 | Top Wealth | [View Docs](#top-wealth) |
@@ -19,10 +20,10 @@ We currently offer the following statistics APIs:
 | Top Crashers | [View Docs](#top-crashers) |
 | Newest Players | [View Docs](#newest-players) |
 | Badges & Licenses | [View Docs](#badges--licenses) |
-| [TC] Training Team Members | [View Docs](#tc-training-team-members)  |
-| [TC] CityDriving Members | [View Docs](#tc-citydriving-members) |
-| [TC] CityDriving Admins by Level | [View Docs](#tc-citydriving-admins-by-level) |
-| [TC] Racing Members | [View Docs](#tc-racing-members) |
+| \[TC\] Training Team Members | [View Docs](#tc-training-team-members) |
+| \[TC\] CityDriving Members | [View Docs](#tc-citydriving-members) |
+| \[TC\] CityDriving Admins by Level | [View Docs](#tc-citydriving-admins-by-level) |
+| \[TC\] Racing Members | [View Docs](#tc-racing-members) |
 
 ## API-Wide Optional Parameters
 
@@ -32,21 +33,19 @@ All statistics API requests default to 20 rows of returned data. Certain applica
 | :--- | :--- | :--- |
 | `rows` | _{integer}_ : Number of rows to request: 1-1000 | 20 |
 | `skip` | _{integer}_ : Number of rows to skip/offset: 1-1000 | - |
-| `prettyprint` | _{integer}_ : Use pretty print: 0 &#124; 1 | - |
-
-
+| `prettyprint` | _{integer}_ : Use pretty print: 0 \| 1 | - |
 
 #### Examples
 
 Request first 50 records: `rows=50`  
 Request records 60 to 80: `skip=60`  
-Request records 100 to 200: `skip=100&rows=100`  
+Request records 100 to 200: `skip=100&rows=100`
 
 ---
 
 ## Users Online
 
-The users online API gives you basic details of all users who are online on a [TC] CityDriving server.
+The users online API gives you basic details of all users who are online on a \[TC\] CityDriving server.
 
 **ENDPOINT:** `/citydriving/stats/online`
 
@@ -55,7 +54,7 @@ The users online API gives you basic details of all users who are online on a [T
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
-| `server` | _{string}_: one &#124; two &#124; three &#124; all |
+| `server` | _{string}_: one \| two \| three \| all |
 
 #### Optional Parameters
 
@@ -67,11 +66,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This request usually returns all connected users on a given CityDriving server. This example only shows one user for brevity. The default range is 20 users.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/online?key=YOUR_KEY&server=all
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -85,6 +86,59 @@ HTTP/1.1 200 OK
         "bonus": 22,
         "lastCar": "XRT",
         "lastPosition": "^3Medical Centre^8",
+        "server": "^7One"
+    },
+    ...
+]
+```
+
+---
+
+## Gumball
+
+The Gumball API gives you access to a separate table comprising entries into the current Gumball event. Records are ordered by a user's position in the overall Gumball standings. This API will return an empty array if the event is not currently running.
+
+**ENDPOINT:** `/citydriving/stats/gumball`
+
+#### Mandatory Parameters
+
+| Name | Expected Value |
+| :--- | :--- |
+| `key` | _{string}_ : API Key |
+
+#### Optional Parameters
+
+See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+
+#### Example
+
+**REQUEST:** `?key=YOUR_KEY`
+
+This request returns all users currently entered into a Gumball event. This example only shows one user for brevity. The default range is 20 users.
+
+**RESPONSE:**
+
+```shell
+GET https://api.tc-gaming.co.uk/citydriving/stats/gumball?key=YOUR_KEY
+HTTP/1.1 200 OK
+```
+
+```json
+[
+    {
+        "id": 17,
+        "countryCode": "GB",
+        "username": "mbutcher",
+        "nickname": "^1[TC]\u00bbPete\u00ab",
+        "id_user": 17,
+        "start_distance": 226358557.0859,
+        "start_time": 20416734,
+        "current_time": 20416734,
+        "current_distance": 226358557.0859,
+        "gumball_distance": 0,
+        "gumball_time": 0,
+        "avg_speed": 0,
+        "last_seen_ago": 927539,
         "server": "^7One"
     },
     ...
@@ -115,11 +169,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This request usually returns all connected users on all CityDriving servers. This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/online?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -157,11 +213,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/money?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -179,7 +237,7 @@ HTTP/1.1 200 OK
 
 ## Top Wealth
 
-The top wealth API can return any range of the top 1000 users with the most money and assets (wealth). The default range is 20.
+The top wealth API can return any range of the top 1000 users with the most money and assets \(wealth\). The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/wealth`
 
@@ -199,11 +257,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/wealth?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -241,11 +301,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/cop_xp?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -283,11 +345,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/robber_xp?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -307,7 +371,7 @@ HTTP/1.1 200 OK
 
 ## Roleplay Points
 
-The roleplay points API can return any range of the top 1000 users with the highest number of roleplaying points (RP). The default range is 20.
+The roleplay points API can return any range of the top 1000 users with the highest number of roleplaying points \(RP\). The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/rp`
 
@@ -327,11 +391,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/rp?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -369,11 +435,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This example only shows one ticket for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/last_tickets?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -416,11 +484,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/crashers?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -458,11 +528,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/new_players?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -491,7 +563,7 @@ Get all users who have a certain license. The default range is 20.
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
-| `badge` | _{string}_ : Badge Name (See list of values below) |
+| `badge` | _{string}_ : Badge Name \(See list of values below\) |
 
 #### Optional Parameters
 
@@ -507,12 +579,12 @@ These are the most common values for `badge`.
 | TOW | `tow` |
 | MED/RES | `med` |
 | RACE | `race` |
-| [TC] CityDriving Admin | `tc` |
-| [TC] Trainer | `tct` |
-| [GLOW] Member | `glow` |
-| [CSR] Member | `csr` |
+| \[TC\] CityDriving Admin | `tc` |
+| \[TC\] Trainer | `tct` |
+| \[GLOW\] Member | `glow` |
+| \[CSR\] Member | `csr` |
 | 6Speed Member | `6s` |
-| [RDSR] Member | `rdsr` |
+| \[RDSR\] Member | `rdsr` |
 | SO Member | `so` |
 
 #### Example
@@ -521,11 +593,13 @@ These are the most common values for `badge`.
 
 This example lists COP badges and only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/badge?key=YOUR_KEY&badge=cop
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -540,7 +614,7 @@ HTTP/1.1 200 OK
 
 ---
 
-## [TC] Training Team Members
+## \[TC\] Training Team Members
 
 Get a list of training team members. The default range is 20 so you may need to use a higher value for the `rows` parameter.
 
@@ -564,7 +638,7 @@ The levels key refers to a trainer's basic rank within the team:
 | :--- | :--- |
 | Leader | 1 |
 | Trainer | 2 |
-| Assistant | 3 | 
+| Assistant | 3 |
 | Civillian Assistant | 4 |
 
 #### Example
@@ -573,11 +647,13 @@ The levels key refers to a trainer's basic rank within the team:
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/trainer_level?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -593,9 +669,9 @@ HTTP/1.1 200 OK
 
 ---
 
-## [TC] CityDriving Members
+## \[TC\] CityDriving Members
 
-Get a list of [TC] CityDriving admins. The default range is 20 so you may need to use a higher value for the `rows` parameter.
+Get a list of \[TC\] CityDriving admins. The default range is 20 so you may need to use a higher value for the `rows` parameter.
 
 **ENDPOINT:** `/citydriving/stats/tcmembers`
 
@@ -615,11 +691,13 @@ See [API-Wide Optional Parameters](#api-wide-optional-parameters).
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/tcmembers?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -636,9 +714,9 @@ HTTP/1.1 200 OK
 
 ---
 
-## [TC] CityDriving Admins by Level
+## \[TC\] CityDriving Admins by Level
 
-Get a list of [TC] CityDriving admins by their admin level. The default range is 20 so you may need to use a higher value for the `rows` parameter.
+Get a list of \[TC\] CityDriving admins by their admin level. The default range is 20 so you may need to use a higher value for the `rows` parameter.
 
 **ENDPOINT:** `/citydriving/stats/admins`
 
@@ -647,7 +725,7 @@ Get a list of [TC] CityDriving admins by their admin level. The default range is
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
-| `level` | _{string}_ : Admin Level (See list of values below) |
+| `level` | _{string}_ : Admin Level \(See list of values below\) |
 
 #### Optional Parameters
 
@@ -661,7 +739,7 @@ The levels key refers to an admin's basic rank within the team. Use the followin
 | :--- | :--- |
 | Leader/Server Control/Chief Constable/CCiT | 1 |
 | Inspector/Supervisor | 2 |
-| Constable | 3 | 
+| Constable | 3 |
 | Constable in Probation | 4 |
 | Recruit | 5 |
 
@@ -671,11 +749,13 @@ The levels key refers to an admin's basic rank within the team. Use the followin
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/admins?key=YOUR_KEY&level=1
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -692,9 +772,9 @@ HTTP/1.1 200 OK
 
 ---
 
-## [TC] Racing Members
+## \[TC\] Racing Members
 
-Get a list of [TC] Racing members. The default range is 20 so you may need to use a higher value for the `rows` parameter.
+Get a list of \[TC\] Racing members. The default range is 20 so you may need to use a higher value for the `rows` parameter.
 
 **ENDPOINT:** `/citydriving/stats/tcrmembers`
 
@@ -714,8 +794,8 @@ The levels key refers to an admin's basic rank within the team.
 
 | Rank | Level |
 | :--- | :--- |
-| [TC] Team Leader/[TC] Racing Manager | 1 |
-| [TC] Racing Driver | 2 |
+| \[TC\] Team Leader/\[TC\] Racing Manager | 1 |
+| \[TC\] Racing Driver | 2 |
 
 #### Example
 
@@ -723,11 +803,13 @@ The levels key refers to an admin's basic rank within the team.
 
 This example only shows one user for brevity.
 
-**RESPONSE:** 
+**RESPONSE:**
+
 ```shell
 GET https://api.tc-gaming.co.uk/citydriving/stats/tcrmember?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
+
 ```json
 [
     {
@@ -741,3 +823,6 @@ HTTP/1.1 200 OK
     ...
 ]
 ```
+
+
+
