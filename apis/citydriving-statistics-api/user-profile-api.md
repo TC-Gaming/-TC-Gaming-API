@@ -8,10 +8,8 @@ We currently offer the following user profile APIs:
 
 | API | Documentation |
 | :--- | :--- |
-| Get a User Profile | [View Docs](#get-a-user-profile) |
-| Get a User's InSim UI Options | [View Docs](#get-a-users-insim-ui-options) |
-
----
+| Get a User Profile | [View Docs](user-profile-api.md#get-a-user-profile) |
+| Get a User's InSim UI Options | [View Docs](user-profile-api.md#get-a-users-insim-ui-options) |
 
 ## Get a User Profile
 
@@ -19,14 +17,14 @@ Access all of a CityDriving user's profile details and statistics.
 
 **ENDPOINT:** `/citydriving/profile/get`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 | `username` | _{string}_ : A Live for Speed username |
 
-#### Optional Parameters
+### Optional Parameters
 
 This API can optionally return a stats object, an array of cars and/or and array of licenses. Any combination can be requested.
 
@@ -36,7 +34,7 @@ This API can optionally return a stats object, an array of cars and/or and array
 | `cars` | _{number}_ : 0 \| 1 |
 | `licenses` | _{number}_ : 0 \| 1 |
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY&username=chucknorris&stats=1&cars=1&licenses=1`
 
@@ -44,12 +42,12 @@ This request usually returns all cars and licenses owned by a user. This example
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/profile/get?key=YOUR_KEY&username=chucknorris&stats=1&cars=1&licenses=1
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 {
   "id": 4,
   "username": "chucknorris",
@@ -130,15 +128,15 @@ HTTP/1.1 200 OK
     {
       "vin": "AAAAB",
       "type": "XFG",
-      "odometerKm": 7265.608,
-      "condition": 71.6
+      "odometerKm": 7819.045,
+      "condition": 67.1463,
+      "wear": 32.8437,
+      "damage": 0
     },
     ...      
   ]
 }
 ```
-
----
 
 ## Get a User's InSim UI Options
 
@@ -146,14 +144,14 @@ Access a CityDriving user's `!setopt` InSim UI options.
 
 **ENDPOINT:** `/citydriving/profile/getopts`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 | `username` | _{string}_ : A Live for Speed username |
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY&username=mbutcher`
 
@@ -161,12 +159,12 @@ This API only returns the options which have been changed from the default setti
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/profile/getopts?key=YOUR_KEY&username=mbutcher
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 {
   "tccol": 5,
   "rccol": 5,
@@ -182,6 +180,4 @@ HTTP/1.1 200 OK
   "chase_debug": 0
 }
 ```
-
-
 

@@ -8,9 +8,7 @@ We currently offer the following server status APIs:
 
 | API | Documentation |
 | :--- | :--- |
-| Server Status Overview | [View Docs](#server-status-overview) |
-
----
+| Server Status Overview | [View Docs](server-status-api.md#server-status-overview) |
 
 ## Server Status Overview
 
@@ -18,25 +16,27 @@ The server status overview gives details such as online status, track code, trac
 
 **ENDPOINT:** `/citydriving/live/status`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
-| :--- | :--- | :--- |
+| :--- | :--- |
 | `key` | _{string}_ : API Key |
-| `server` | _{string}_ : all &#124; one &#124; two &#124; three &#124; events &#124; training |
+| `server` | _{string}_ : all \| one \| two \| three \| events \| training |
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY&server=all`
 
 This example request will return the status of all servers.
 
 **RESPONSE:**
-```shell
+
+```text
 GET https://api.tc-gaming.co.uk/citydriving/live/status?key=YOUR_KEY&server=all
 HTTP/1.1 200 OK
 ```
-```json
+
+```javascript
 {
   "one": {
     "online": true,
@@ -75,3 +75,4 @@ HTTP/1.1 200 OK
   }
 }
 ```
+

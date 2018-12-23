@@ -1,4 +1,4 @@
-# [TC] Discord API
+# Discord API
 
 The endpoint for the Discord API is: `/discord_status`
 
@@ -8,20 +8,18 @@ We currently offer the following Discord APIs:
 
 | API | Documentation |
 | :--- | :--- |
-| Discord Status API | [View Docs](#discord-status-api) |
-
----
+| Discord Status API | [View Docs](discord-api.md#discord-status-api) |
 
 ## Discord Status API
 
-This Discord API gives you access to all users who are currently on the [TC] Gaming public Discord server.
+This Discord API gives you access to all users who are currently on the \[TC\] Gaming public Discord server.
 
 **ENDPOINT:** `/discord_status`
 
 ## Mandatory Parameters
 
 | Name | Expected Value |
-| :--- | :--- | :--- |
+| :--- | :--- |
 | `key` | _{string}_ : API Key |
 
 ## Example
@@ -31,11 +29,13 @@ This Discord API gives you access to all users who are currently on the [TC] Gam
 This example only returns one user for brevity.
 
 **RESPONSE:**
-```shell
+
+```text
 GET https://api.tc-gaming.co.uk/discord_status?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
-```json
+
+```javascript
 {
     "channels": [
         {

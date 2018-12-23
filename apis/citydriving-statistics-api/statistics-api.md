@@ -8,22 +8,22 @@ We currently offer the following statistics APIs:
 
 | API | Documentation |
 | :--- | :--- |
-| Users Online | [View Docs](#users-online) |
-| Gumball | [View Docs](#gumball) |
-| Top Distance | [View Docs](#top-distance) |
-| Top Money | [View Docs](#top-money) |
-| Top Wealth | [View Docs](#top-wealth) |
-| Cop Experience | [View Docs](#cop-experience) |
-| Robber Experience | [View Docs](#robber-experience) |
-| Roleplay Points | [View Docs](#roleplay-points) |
-| Last Tickets | [View Docs](#last-tickets) |
-| Top Crashers | [View Docs](#top-crashers) |
-| Newest Players | [View Docs](#newest-players) |
-| Badges & Licenses | [View Docs](#badges--licenses) |
-| \[TC\] Training Team Members | [View Docs](#tc-training-team-members) |
-| \[TC\] CityDriving Members | [View Docs](#tc-citydriving-members) |
-| \[TC\] CityDriving Admins by Level | [View Docs](#tc-citydriving-admins-by-level) |
-| \[TC\] Racing Members | [View Docs](#tc-racing-members) |
+| Users Online | [View Docs](statistics-api.md#users-online) |
+| Gumball | [View Docs](statistics-api.md#gumball) |
+| Top Distance | [View Docs](statistics-api.md#top-distance) |
+| Top Money | [View Docs](statistics-api.md#top-money) |
+| Top Wealth | [View Docs](statistics-api.md#top-wealth) |
+| Cop Experience | [View Docs](statistics-api.md#cop-experience) |
+| Robber Experience | [View Docs](statistics-api.md#robber-experience) |
+| Roleplay Points | [View Docs](statistics-api.md#roleplay-points) |
+| Last Tickets | [View Docs](statistics-api.md#last-tickets) |
+| Top Crashers | [View Docs](statistics-api.md#top-crashers) |
+| Newest Players | [View Docs](statistics-api.md#newest-players) |
+| Badges & Licenses | [View Docs](statistics-api.md#badges--licenses) |
+| \[TC\] Training Team Members | [View Docs](statistics-api.md#tc-training-team-members) |
+| \[TC\] CityDriving Members | [View Docs](statistics-api.md#tc-citydriving-members) |
+| \[TC\] CityDriving Admins by Level | [View Docs](statistics-api.md#tc-citydriving-admins-by-level) |
+| \[TC\] Racing Members | [View Docs](statistics-api.md#tc-racing-members) |
 
 ## API-Wide Optional Parameters
 
@@ -35,13 +35,11 @@ All statistics API requests default to 20 rows of returned data. Certain applica
 | `skip` | _{integer}_ : Number of rows to skip/offset: 1-1000 | - |
 | `prettyprint` | _{integer}_ : Use pretty print: 0 \| 1 | - |
 
-#### Examples
+### Examples
 
 Request first 50 records: `rows=50`  
 Request records 60 to 80: `skip=60`  
 Request records 100 to 200: `skip=100&rows=100`
-
----
 
 ## Users Online
 
@@ -49,18 +47,18 @@ The users online API gives you basic details of all users who are online on a \[
 
 **ENDPOINT:** `/citydriving/stats/online`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 | `server` | _{string}_: one \| two \| three \| all |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY&server=all`
 
@@ -68,12 +66,12 @@ This request usually returns all connected users on a given CityDriving server. 
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/online?key=YOUR_KEY&server=all
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 11969,
@@ -92,25 +90,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Gumball
 
 The Gumball API gives you access to a separate table comprising entries into the current Gumball event. Records are ordered by a user's position in the overall Gumball standings. This API will return an empty array if the event is not currently running.
 
 **ENDPOINT:** `/citydriving/stats/gumball`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -118,12 +114,12 @@ This request returns all users currently entered into a Gumball event. This exam
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/gumball?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 17,
@@ -145,25 +141,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Top Distance
 
 The top distance API can return any range of the top 1000 users with the highest total driven distance. The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/distance`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -171,12 +165,12 @@ This request usually returns all connected users on all CityDriving servers. Thi
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/online?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 23210,
@@ -189,25 +183,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Top Money
 
 The top money API can return any range of the top 1000 users with the most money. The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/money`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -215,12 +207,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/money?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 2107,
@@ -233,25 +225,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Top Wealth
 
 The top wealth API can return any range of the top 1000 users with the most money and assets \(wealth\). The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/wealth`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -259,12 +249,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/wealth?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 2107,
@@ -277,25 +267,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Cop Experience
 
 The cop experience API can return any range of the top 1000 users with the highest cop experience. The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/cop_xp`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -303,12 +291,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/cop_xp?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 23210,
@@ -321,25 +309,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Robber Experience
 
 The robber experience API can return any range of the top 1000 users with the highest robber experience. The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/robber_xp`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -347,12 +333,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/robber_xp?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 23210,
@@ -367,25 +353,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Roleplay Points
 
 The roleplay points API can return any range of the top 1000 users with the highest number of roleplaying points \(RP\). The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/rp`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -393,12 +377,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/rp?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 23210,
@@ -411,25 +395,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Last Tickets
 
 The last tickets API can return any range of the latest 1000 issued fines. The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/last_tickets`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -437,12 +419,12 @@ This example only shows one ticket for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/last_tickets?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id_cop": 29920,
@@ -460,25 +442,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Top Crashers
 
 The top crashers API can return any range of the top 1000 with the most 'heavy contacts'. The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/crashers`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -486,12 +466,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/crashers?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 23210,
@@ -504,25 +484,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Newest Players
 
 The newest players API can return any range of the newest 1000 players. The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/new_players`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -530,12 +508,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/new_players?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 30917,
@@ -550,26 +528,24 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## Badges & Licenses
 
 Get all users who have a certain license. The default range is 20.
 
 **ENDPOINT:** `/citydriving/stats/badge`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 | `badge` | _{string}_ : Badge Name \(See list of values below\) |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### List of Badges & Licenses
+### List of Badges & Licenses
 
 These are the most common values for `badge`.
 
@@ -581,13 +557,12 @@ These are the most common values for `badge`.
 | RACE | `race` |
 | \[TC\] CityDriving Admin | `tc` |
 | \[TC\] Trainer | `tct` |
-| \[GLOW\] Member | `glow` |
 | \[CSR\] Member | `csr` |
 | 6Speed Member | `6s` |
 | \[RDSR\] Member | `rdsr` |
 | SO Member | `so` |
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY&badge=cop`
 
@@ -595,12 +570,12 @@ This example lists COP badges and only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/badge?key=YOUR_KEY&badge=cop
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 4,
@@ -612,25 +587,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## \[TC\] Training Team Members
 
 Get a list of training team members. The default range is 20 so you may need to use a higher value for the `rows` parameter.
 
 **ENDPOINT:** `/citydriving/stats/trainer_level`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Trainer Levels
+### Trainer Levels
 
 The levels key refers to a trainer's basic rank within the team:
 
@@ -641,7 +614,7 @@ The levels key refers to a trainer's basic rank within the team:
 | Assistant | 3 |
 | Civillian Assistant | 4 |
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -649,12 +622,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/trainer_level?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 487,
@@ -667,25 +640,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## \[TC\] CityDriving Members
 
 Get a list of \[TC\] CityDriving admins. The default range is 20 so you may need to use a higher value for the `rows` parameter.
 
 **ENDPOINT:** `/citydriving/stats/tcmembers`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -693,12 +664,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/tcmembers?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 17,
@@ -712,26 +683,24 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## \[TC\] CityDriving Admins by Level
 
 Get a list of \[TC\] CityDriving admins by their admin level. The default range is 20 so you may need to use a higher value for the `rows` parameter.
 
 **ENDPOINT:** `/citydriving/stats/admins`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 | `level` | _{string}_ : Admin Level \(See list of values below\) |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Admin Levels
+### Admin Levels
 
 The levels key refers to an admin's basic rank within the team. Use the following levels as values for the `level` parameter:
 
@@ -743,7 +712,7 @@ The levels key refers to an admin's basic rank within the team. Use the followin
 | Constable in Probation | 4 |
 | Recruit | 5 |
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -751,12 +720,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/admins?key=YOUR_KEY&level=1
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 17,
@@ -770,25 +739,23 @@ HTTP/1.1 200 OK
 ]
 ```
 
----
-
 ## \[TC\] Racing Members
 
 Get a list of \[TC\] Racing members. The default range is 20 so you may need to use a higher value for the `rows` parameter.
 
 **ENDPOINT:** `/citydriving/stats/tcrmembers`
 
-#### Mandatory Parameters
+### Mandatory Parameters
 
 | Name | Expected Value |
 | :--- | :--- |
 | `key` | _{string}_ : API Key |
 
-#### Optional Parameters
+### Optional Parameters
 
-See [API-Wide Optional Parameters](#api-wide-optional-parameters).
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
 
-#### Admin Levels
+### Admin Levels
 
 The levels key refers to an admin's basic rank within the team.
 
@@ -797,7 +764,7 @@ The levels key refers to an admin's basic rank within the team.
 | \[TC\] Team Leader/\[TC\] Racing Manager | 1 |
 | \[TC\] Racing Driver | 2 |
 
-#### Example
+### Example
 
 **REQUEST:** `?key=YOUR_KEY`
 
@@ -805,12 +772,12 @@ This example only shows one user for brevity.
 
 **RESPONSE:**
 
-```shell
+```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/tcrmember?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
-```json
+```javascript
 [
     {
         "id": 17,
@@ -823,6 +790,4 @@ HTTP/1.1 200 OK
     ...
 ]
 ```
-
-
 

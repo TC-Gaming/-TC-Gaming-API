@@ -1,4 +1,4 @@
-# [TC] CityDriving Statistics API
+# CityDriving Statistics API
 
 The CityDriving API gives you access to live server information, all CityDriving InSim statistics, user profiles, vehicles and the current CityDriving AutoMarket listings.
 
@@ -13,3 +13,4 @@ We currently offer the following CityDriving APIs:
 | `\stats` | Statistics API | [View Docs](statistics-api.md) |
 | `\carinfo` | Vehicle API | [View Docs](vehicle-api.md) |
 | `\market` | AutoMarket API | [View Docs](automarket-api.md) |
+

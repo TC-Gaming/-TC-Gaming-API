@@ -1,23 +1,20 @@
 # Basic Requests
 
-If you're new to using REST APIs, this guide should help you get started with making basic requests. It provides reference implementations for fetching data from our API by using the [User Profile API](../citydriving-statistics-api/user-profile-api.md) as an example.
+If you're new to using REST APIs, this guide should help you get started with making basic requests. It provides reference implementations for fetching data from our API by using the [User Profile API](../apis/citydriving-statistics-api/user-profile-api.md) as an example.
 
-Our code examples are available in JavaScript and PHP _(change language in the top right)._
+Our code examples are available in JavaScript and PHP _\(change language in the top right\)._
 
-{% method %}
 ## Reference Implementations
 
-{% sample lang="js" %}
-
+{% tabs %}
+{% tab title="JavaScript" %}
 ### JavaScript
 
 Here is our reference implementation for fetching data with JavaScript. You will need to change the values of `YOUR_KEY` and `USERNAME`.
 
-**Try out this example on [JS Bin](https://jsbin.com/luqawoy/edit?js,console)**
+**Try out this example on** [**JS Bin**](https://jsbin.com/luqawoy/edit?js,console)
 
-
-
-```js
+```javascript
 var key = 'YOUR_KEY';
 var request = {
   api: 'citydriving/profile/get',
@@ -28,7 +25,7 @@ var request = {
 };
 
 TCAPIRequest(request, function(data) {
-  
+
   // Do something with the returned data
   console.log(data);
 });
@@ -54,13 +51,13 @@ function TCAPIRequest(req, callback) {
 }
 ```
 
-### JavaScript (JQuery)
+### JavaScript \(JQuery\)
 
 If you would prefer, here is our reference implementation for fetching data with [JQuery](https://jquery.org). You will need to change the values of `YOUR_KEY` and `USERNAME`.
 
-**Try out this example on [JS Bin](https://jsbin.com/yecomiq/edit?js,console)**
+**Try out this example on** [**JS Bin**](https://jsbin.com/yecomiq/edit?js,console)
 
-```js
+```javascript
 $.get(
   "https://api.tc-gaming.co.uk/citydriving/profile/get",
   {
@@ -69,7 +66,7 @@ $.get(
   }
 ).done(
   function(data) {
-  
+
     // Do something with the returned data
     console.log(data);
   }
@@ -77,9 +74,9 @@ $.get(
   console.log('Error fetching data!\nMake sure you have set your API key and parameters.')
 );
 ```
+{% endtab %}
 
-{% sample lang="php" %}
-
+{% tab title="PHP" %}
 ### PHP
 
 Here is our reference implementation for requesting data with PHP. You will need to change the values of `YOUR_KEY` and `USERNAME`.
@@ -116,5 +113,6 @@ function TCAPIRequest($cmd, $queryData = null) {
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
-{% endmethod %}
