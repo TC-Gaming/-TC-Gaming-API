@@ -3,7 +3,7 @@
 # [TC] Gaming API Documentation
 
 **API Version:** 2  
-**Latest Revision:** 9th September 2017  
+**Latest Revision:** 23rd December 2018  
 
 Our REST API lets developers gain full access to all of the [TC] server statistics including live server statuses and CityDriving statistics.
 
