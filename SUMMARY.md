@@ -8,7 +8,6 @@
   * [API Keys](getting-started/readme/api-keys.md)
   * [Rate Limiting](getting-started/readme/rate-limiting.md)
   * [Available APIs](getting-started/readme/available-apis.md)
-  * [Planned Changes](getting-started/readme/planned-changes.md)
   * [Get Support](getting-started/readme/get-support.md)
   * [Contribute](getting-started/readme/contribute.md)
 

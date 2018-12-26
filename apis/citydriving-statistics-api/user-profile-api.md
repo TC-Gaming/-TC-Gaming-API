@@ -26,24 +26,30 @@ Access all of a CityDriving user's profile details and statistics.
 
 ### Optional Parameters
 
-This API can optionally return a stats object, an array of cars and/or and array of licenses. Any combination can be requested.
+This API can optionally return a stats object, an array of cars \(with or without their upgrades\), an array of licences and/or and array of properties. Any combination can be requested.
 
 | Name | Expected Value |
 | :--- | :--- |
 | `stats` | _{number}_ : 0 \| 1 |
 | `cars` | _{number}_ : 0 \| 1 |
 | `licenses` | _{number}_ : 0 \| 1 |
+| `upgrades` | _{number}_ : 0 \| 1 |
+| `properties` | _{number}_ : 0 \| 1 |
 
 ### Example
 
-**REQUEST:** `?key=YOUR_KEY&username=chucknorris&stats=1&cars=1&licenses=1`
+**REQUEST:** 
 
-This request usually returns all cars and licenses owned by a user. This example only shows one of each for brevity.
+```text
+?key=YOUR_KEY&username=chucknorris&stats=1&cars=1&licenses=1&upgrades=1&properties=1
+```
+
+This request usually returns all cars, licenses, properties and upgrades owned by a user. This example only shows one of each type for brevity.
 
 **RESPONSE:**
 
 ```text
-GET https://api.tc-gaming.co.uk/citydriving/profile/get?key=YOUR_KEY&username=chucknorris&stats=1&cars=1&licenses=1
+GET https://api.tc-gaming.co.uk/citydriving/profile/get?key=YOUR_KEY&username=chucknorris&stats=1&cars=1&licenses=1&upgrades=1&properties=1
 HTTP/1.1 200 OK
 ```
 
@@ -59,9 +65,6 @@ HTTP/1.1 200 OK
   "money": 1586937,
   "cash": 3628,
   "balance": 1583309,
-  "hasRadarWarner": true,
-  "hasLocator": true,
-  "hasWinch": true,
   "dateJoined": 1198268290,
   "dateLastSeen": 1504975483,
   "countryCode": "de",
@@ -124,6 +127,22 @@ HTTP/1.1 200 OK
       "suspended": false
     },
     ...
+  ],
+  "properties": [
+    {
+      "id": 13,
+      "type": "garage",
+      "condition": 1,
+      "value": 0
+    },
+    {
+      "id": 11,
+      "type": "locator",
+      "condition": 1,
+      "value": 10000
+    },
+    ...
+  ],
   "cars": [
     {
       "vin": "AAAAB",
@@ -131,7 +150,27 @@ HTTP/1.1 200 OK
       "odometerKm": 7819.045,
       "condition": 67.1463,
       "wear": 32.8437,
-      "damage": 0
+      "damage": 0,
+      "upgrades": [
+        {
+          "id": 113172,
+          "type": "ramp",
+          "condition": 0.9988,
+          "value": 2497
+        },
+        {
+          "id": 113171,
+          "type": "winch",
+          "condition": 0.999,
+          "value": 4995
+        },
+        {
+          "id": 113110,
+          "type": "radar_warner",
+          "condition": 1,
+          "value": 2500
+        }
+      ]
     },
     ...      
   ]
@@ -166,18 +205,20 @@ HTTP/1.1 200 OK
 
 ```javascript
 {
-  "tccol": 5,
-  "rccol": 5,
-  "cccol": 5,
-  "lcol": 5,
-  "ccol": 6,
-  "xcol": 6
-  "chcol": 3,
-  "pmcol": 5,
-  "requestcol": 5
-  "force_mouse": 0,
-  "show_speedlimit": 1,
-  "chase_debug": 0
+"chase_debug": "0",
+"force_mouse": "0",
+"hidead": "7817d923f3307c27bc5b02cbcd8c748d",
+"loccol": "7",
+"locsize": "5",
+"money": "session",
+"mph": "0",
+"pri_mrt_civ": "ACUFU",
+"pri_uf1_civ": "ACTUJ",
+"pri_uf1_cop": "ACTUJ",
+"pri_uf1_med": "ACTUJ",
+"pri_uf1_res": "ACTUJ",
+"spawn_location": "cruise",
+"theme": "chucks"
 }
 ```
 
