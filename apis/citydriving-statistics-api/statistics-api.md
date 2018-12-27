@@ -555,6 +555,7 @@ These are the most common values for `badge`.
 | MED/RES | `med` |
 | RACE | `race` |
 | \[TC\] CityDriving Admin | `tc` |
+| \[TC\] CityDriving Recruit | `recruit` |
 | \[TC\] Trainer | `tct` |
 | \[CSR\] Member | `csr` |
 | 6Speed Member | `6s` |
@@ -709,7 +710,6 @@ The levels key refers to an admin's basic rank within the team. Use the followin
 | Inspector/Supervisor | 2 |
 | Constable | 3 |
 | Constable in Probation | 4 |
-| Recruit | 5 |
 
 ### Example
 
