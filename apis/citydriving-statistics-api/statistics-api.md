@@ -773,7 +773,7 @@ This example only shows one user for brevity.
 **RESPONSE:**
 
 ```text
-GET https://api.tc-gaming.co.uk/citydriving/stats/tcrmember?key=YOUR_KEY
+GET https://api.tc-gaming.co.uk/citydriving/stats/tcrmembers?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
