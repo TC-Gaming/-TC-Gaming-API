@@ -24,6 +24,7 @@ We currently offer the following statistics APIs:
 | \[TC\] CityDriving Members | [View Docs](statistics-api.md#tc-citydriving-members) |
 | \[TC\] CityDriving Admins by Level | [View Docs](statistics-api.md#tc-citydriving-admins-by-level) |
 | \[TC\] Racing Members | [View Docs](statistics-api.md#tc-racing-members) |
+| \[TC\] Gaming Members | [View Docs](statistics-api.md#tc-gaming-members) |
 
 ## API-Wide Optional Parameters
 
@@ -773,6 +774,60 @@ This example only shows one user for brevity.
 
 ```text
 GET https://api.tc-gaming.co.uk/citydriving/stats/tcrmember?key=YOUR_KEY
+HTTP/1.1 200 OK
+```
+
+```javascript
+[
+    {
+        "id": 17,
+        "countryCode": "GB",
+        "username": "mbutcher",
+        "nickname": "^1[TC]\u00bbPete\u00ab",
+        "lastSeen": 1502325692,
+        "adminLevel": 1
+    },
+    ...
+]
+```
+
+## \[TC\] Gaming Members
+
+Get a list of \[TC\] Gaming members.
+Note that the returned list currently only includes members who have been explicitly given a \[TC\] Gaming admin level and not those who have inherited \[TC\] Gaming membership by being a full member of \[TC\] CityDriving or \[TC\] Racing.
+The default range is 20 so you may need to use a higher value for the `rows` parameter.
+
+**ENDPOINT:** `/citydriving/stats/tcgmembers`
+
+### Mandatory Parameters
+
+| Name | Expected Value |
+| :--- | :--- |
+| `key` | _{string}_ : API Key |
+
+### Optional Parameters
+
+See [API-Wide Optional Parameters](statistics-api.md#api-wide-optional-parameters).
+
+### Admin Levels
+
+The levels key refers to an admin's basic rank within the team.
+
+| Rank | Level |
+| :--- | :--- |
+| \[TC\] Team Leader | 1 |
+| \[TC\] Gaming Member | 2 |
+
+### Example
+
+**REQUEST:** `?key=YOUR_KEY`
+
+This example only shows one user for brevity.
+
+**RESPONSE:**
+
+```text
+GET https://api.tc-gaming.co.uk/citydriving/stats/tcgmembers?key=YOUR_KEY
 HTTP/1.1 200 OK
 ```
 
