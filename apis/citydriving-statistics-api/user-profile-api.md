@@ -63,8 +63,6 @@ HTTP/1.1 200 OK
   "adminLevel": 1,
   "needsCopTraining": false,
   "money": 1586937,
-  "cash": 3628,
-  "balance": 1583309,
   "dateJoined": 1198268290,
   "dateLastSeen": 1504975483,
   "countryCode": "de",
